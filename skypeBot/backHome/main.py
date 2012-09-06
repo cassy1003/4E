@@ -21,8 +21,8 @@ def handler(msg, event):
                 filename = "back_log/" + name + ".dat"
                 if os.path.exists(filename):
                     file = open(filename, "a")
-                    if len(item) == 3:
-                        file.write(item[2]+"\n")
+                    if len(item) >= 3:
+                        file.write(item[2]+" "+item[3]+"\n")
                     else:
                         file.write(str(datetime.datetime.now())+"\n")
                     file.close()
