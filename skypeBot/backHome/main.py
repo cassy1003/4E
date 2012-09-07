@@ -1,13 +1,16 @@
 # coding: utf-8
 
 import Skype4Py, os, sys, glob, datetime, time
+from call import call
 
 skype = Skype4Py.Skype()
 skype.Attach()
 
+title = '帰らせマスターから貴方へ伝えたいこと'
+
 def getChatId():
     for i in range(len(skype.Chats)):
-        if skype.Chats[i].Topic == u'帰らせマスターから貴方へ伝えたいこと':
+        if skype.Chats[i].Topic == title:
             return i
 
 chat_id = getChatId()
@@ -75,10 +78,11 @@ def handler(msg, event):
 
 skype.OnMessageStatus = handler
 
-
+call(skype, chat_id, title)
+"""
 while(True):
     now = datetime.datetime.now()
-    if (skype.Chats[chat_id].Topic == u'帰らせマスターから貴方へ伝えたいこと'):
+    if (skype.Chats[chat_id].Topic == title):
 
         if (now.second == 0):
             if (now.hour == 9):
@@ -107,7 +111,7 @@ while(True):
                     time.sleep(10)
     else:
         chat_id = getChatId()
-
+"""
 """
 #skype_name = msg.FromHandle
     if (skype.Chats[chat_id].Topic == u'帰らせマスターから貴方へ伝えたいこと'):
