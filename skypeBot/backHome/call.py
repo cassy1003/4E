@@ -1,11 +1,12 @@
 #-*- coding: utf-8 -*-
 from datetime import datetime
 import time
+from chat import getChatId
 
 def call(skype, chat_id, title):
   while(True):
     now = datetime.now()
-    if (skype.Chats[chat_id].Topic == title):
+    if (skype.Chats[chat_id].Topic == unicode(title, 'utf-8')):
 
       if (now.second == 0):
         if (now.hour == 9):
@@ -33,4 +34,4 @@ def call(skype, chat_id, title):
               skype.Chats[chat_id].SendMessage(now.strftime('%H時やで！こんな時間までおるん！？もうお前なんて知らんわ(punch)'))
               time.sleep(10)
     else:
-      chat_id = getChatId()
+      chat_id = getChatId(skype, title)

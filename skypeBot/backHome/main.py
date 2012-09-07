@@ -8,16 +8,11 @@ skype.Attach()
 
 title = '帰らせマスターから貴方へ伝えたいこと'
 
-def getChatId():
-    for i in range(len(skype.Chats)):
-        if skype.Chats[i].Topic == title:
-            return i
-
-chat_id = getChatId()
+chat_id = getChatId(skype, title)
 
 def handler(msg, event):
     if event == u"RECEIVED":
-        if msg.Chat.Topic == u'帰らせマスターから貴方へ伝えたいこと':
+        if msg.Chat.Topic == unicode(title, 'utf-8'):
             if msg.Body.startswith(u"@back"):
                 item = msg.Body.split(' ')
                 name = item[1]
@@ -79,64 +74,3 @@ def handler(msg, event):
 skype.OnMessageStatus = handler
 
 call(skype, chat_id, title)
-"""
-while(True):
-    now = datetime.datetime.now()
-    if (skype.Chats[chat_id].Topic == title):
-
-        if (now.second == 0):
-            if (now.hour == 9):
-                if (now.minute == 30):
-                    skype.Chats[chat_id].SendMessage(now.strftime('おはよーさん！%m月%d日が始まんで！今日も１日きばっていこやっ(flex)'))
-                    time.sleep(10)
-            elif (now.hour == 21):
-                if (now.minute > 50):
-                    skype.Chats[chat_id].SendMessage(now.strftime('%M分'))
-                    time.sleep(10)
-                elif (now.minute >= 30 & now.minute % 10 == 0):
-                    leftTime = 60 - now.minute
-                    message = '22時まであと' + str(leftTime) + '分やで！？'
-                    skype.Chats[chat_id].SendMessage(message)
-                    time.sleep(10)
-            elif (now.hour == 22):
-                if (now.minute == 0):
-                    skype.Chats[chat_id].SendMessage(now.strftime('%H時になったで！おつかれさん！そろそろ帰ってやー(bow)'))
-                    time.sleep(10)
-                elif (now.minute % 10 == 0):
-                    skype.Chats[chat_id].SendMessage(now.strftime('%H時を%M分過ぎてもうたで！はよ帰ってや！(envy)'))
-                    time.sleep(10)
-            elif (now.hour == 23):
-                if (now.minute == 0):
-                    skype.Chats[chat_id].SendMessage(now.strftime('%H時やで！こんな時間までおるん！？もうお前なんて知らんわ(punch)'))
-                    time.sleep(10)
-    else:
-        chat_id = getChatId()
-"""
-"""
-#skype_name = msg.FromHandle
-    if (skype.Chats[chat_id].Topic == u'帰らせマスターから貴方へ伝えたいこと'):
-        if (now.minute == 0):
-            if (now.second == 0):
-                skype.Chats[chat_id].SendMessage(now.strftime('まいど！%H時%M分%S秒やで！この１時間もきばっていこやっ(flex)'))
-                time.sleep(1)
-        elif (now.minute == 29):
-            if (now.second > 50):
-                skype.Chats[chat_id].SendMessage(now.strftime('%S秒'))
-                time.sleep(1)
-            elif (now.second >= 30 and now.second % 10 == 0):
-                leftTime = 60 - now.second
-                message = '30分まであと' + str(leftTime) + '秒やで！！！'
-                skype.Chats[chat_id].SendMessage(message)
-                time.sleep(1)
-        elif (now.minute == 55):
-            if (now.second == 0):
-                skype.Chats[chat_id].SendMessage(now.strftime('%M分%S秒！この１時間はどうやった？(bow)'))
-                time.sleep(1)
-            elif (now.second % 20 == 0):
-                skype.Chats[chat_id].SendMessage(now.strftime('さぁもうちょい頑張ろー！(envy)'))
-                time.sleep(1)
-        elif (now.minute % 15 == 0):
-            if (now.second == 0):
-                skype.Chats[chat_id].SendMessage(now.strftime('%M分やで！調子どうでっか？！(punch)'))
-                time.sleep(1)
-"""
