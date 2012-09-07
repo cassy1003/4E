@@ -1,7 +1,7 @@
 #!/bin/sh
 while true
 do
-#ここではftpdのプロセス監視
+# make sure bot is always alive
 isAlive=`ps -ef | grep "/usr/bin/python main.py" | grep -v grep | wc -l`
 if [ $isAlive = 1 ]; then
 echo "alive"
