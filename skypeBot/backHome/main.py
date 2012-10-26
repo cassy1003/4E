@@ -109,31 +109,3 @@ while(True):
         else:
             chat_id = getChatId()
 
-"""
-#skype_name = msg.FromHandle
-    if (skype.Chats[chat_id].Topic == u'帰らせマスターから貴方へ伝えたいこと'):
-        if (now.minute == 0):
-            if (now.second == 0):
-                skype.Chats[chat_id].SendMessage(now.strftime('まいど！%H時%M分%S秒やで！この１時間もきばっていこやっ(flex)'))
-                time.sleep(1)
-        elif (now.minute == 29):
-            if (now.second > 50):
-                skype.Chats[chat_id].SendMessage(now.strftime('%S秒'))
-                time.sleep(1)
-            elif (now.second >= 30 and now.second % 10 == 0):
-                leftTime = 60 - now.second
-                message = '30分まであと' + str(leftTime) + '秒やで！！！'
-                skype.Chats[chat_id].SendMessage(message)
-                time.sleep(1)
-        elif (now.minute == 55):
-            if (now.second == 0):
-                skype.Chats[chat_id].SendMessage(now.strftime('%M分%S秒！この１時間はどうやった？(bow)'))
-                time.sleep(1)
-            elif (now.second % 20 == 0):
-                skype.Chats[chat_id].SendMessage(now.strftime('さぁもうちょい頑張ろー！(envy)'))
-                time.sleep(1)
-        elif (now.minute % 15 == 0):
-            if (now.second == 0):
-                skype.Chats[chat_id].SendMessage(now.strftime('%M分やで！調子どうでっか？！(punch)'))
-                time.sleep(1)
-"""
