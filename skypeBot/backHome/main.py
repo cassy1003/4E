@@ -14,7 +14,7 @@ chat_id = getChatId()
 
 def handler(msg, event):
     if event == u"RECEIVED":
-        if msg.Chat.Topic == u'帰らせマスターから貴方へ伝えたいこと':
+        if msg.Chat.Topic == u'帰らせマスターから貴方へ伝えたいこと' or msg.Chat.Topic == u'4Eチャット':
             if msg.Body.startswith(u"@bye"):
                 item = msg.Body.split(' ')
                 try:
