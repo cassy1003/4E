@@ -15,7 +15,7 @@ chat_id = getChatId()
 def handler(msg, event):
     if event == u"RECEIVED":
         if msg.Chat.Topic == u'帰らせマスターから貴方へ伝えたいこと':
-            if msg.Body.startswith(u"@back"):
+            if msg.Body.startswith(u"@bye"):
                 item = msg.Body.split(' ')
                 name = item[1]
                 filename = "back_log/" + name + ".dat"
@@ -39,7 +39,7 @@ def handler(msg, event):
                     file.write("")
                     file.close()
                     msg.Chat.SendMessage(u"username登録したで(*)")
-            elif msg.Body.startswith(u"@look"):
+            elif msg.Body.startswith(u"@history"):
                 item = msg.Body.split(' ')
                 name = item[1]
                 filename = "back_log/" + name + ".dat"
@@ -62,13 +62,13 @@ def handler(msg, event):
                     name = os.path.basename(list).split(".")[0]
                     message += name + ("\n")
                 msg.Chat.SendMessage(message)
-            elif msg.Body.startswith(u"@readme"):
-                msg.Chat.SendMessage(u"[ @readme ]で説明を表示できんで。")
+            elif msg.Body.startswith(u"@rhelp") or msg.Body.startswith(u"@readme"):
+                msg.Chat.SendMessage(u"[ @help ]で説明を表示できんで。")
                 msg.Chat.SendMessage(u"新しくuserを追加するときは[ @new username ]")
-                msg.Chat.SendMessage(u"帰るときに[ @back username ]して帰ってなー")
-                msg.Chat.SendMessage(u"[ @back username ]し忘れたときは[ @back username yyyy-mm-dd HH:MM ]でもOK")
-                msg.Chat.SendMessage(u"履歴を見たいときは[ @look username ]で見れんで")
-                msg.Chat.SendMessage(u"[ @look username num]で指定した分、見れるから！")
+                msg.Chat.SendMessage(u"帰るときに[ @bye username ]して帰ってなー")
+                msg.Chat.SendMessage(u"[ @bye username ]し忘れたときは[ @bye username yyyy-mm-dd HH:MM ]でもOK")
+                msg.Chat.SendMessage(u"履歴を見たいときは[ @history username ]で見れんで")
+                msg.Chat.SendMessage(u"[ @history username num]で指定した分、見れるから！")
                 msg.Chat.SendMessage(u"あとは、[ @list ]で誰が登録されてるかわかんで。")
                 msg.Chat.SendMessage(u"ERROR回避はしてへんからイタズラはやめてや(sweat)")
                 msg.Chat.SendMessage(u"機能はこれからどんどん追加していくで(dance)")
