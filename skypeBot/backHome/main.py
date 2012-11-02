@@ -62,7 +62,7 @@ def handler(msg, event):
                     name = os.path.basename(list).split(".")[0]
                     message += name + ("\n")
                 msg.Chat.SendMessage(message)
-            elif msg.Body.startswith(u"@rhelp") or msg.Body.startswith(u"@readme"):
+            elif msg.Body.startswith(u"@help") or msg.Body.startswith(u"@readme"):
                 msg.Chat.SendMessage(u"[ @help ]で説明を表示できんで。")
                 msg.Chat.SendMessage(u"新しくuserを追加するときは[ @new username ]")
                 msg.Chat.SendMessage(u"帰るときに[ @bye username ]して帰ってなー")
