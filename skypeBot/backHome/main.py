@@ -95,6 +95,8 @@ def handler(msg, event):
                 msg.Chat.SendMessage(u"あとは、[ @list ]で誰が登録されてるかわかんで。")
                 msg.Chat.SendMessage(u"ERROR回避はしてへんからイタズラはやめてや(sweat)")
                 msg.Chat.SendMessage(u"機能はこれからどんどん追加していくで(dance)")
+        elif msg.Body.startswith(u"@cute"):
+            msg.Chat.SendMessage(u"(party) (F) (inlove) Of course, Ayu is so cute (inlove) (F) (party)")
 
 skype.OnMessageStatus = handler
 
