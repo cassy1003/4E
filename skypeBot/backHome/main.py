@@ -108,6 +108,10 @@ while(True):
                 if (now.hour == 9):
                     if (now.minute == 30):
                         skype.Chats[chat_id].SendMessage(now.strftime('おはよーさん！%m月%d日が始まんで！今日も１日きばっていこやっ(flex)'))
+                        filenameList = glob.glob('back_log/*%*%1%*.dat')
+                        for filename in filenameList:
+                            cmd = 'mv ' + filename + ' ' + filename.replace('%1%', '%0%')
+                            os.system(cmd)
                         time.sleep(10)
                 elif (now.hour == 21):
                     if (now.minute > 50):
