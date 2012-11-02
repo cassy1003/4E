@@ -17,49 +17,72 @@ def handler(msg, event):
         if msg.Chat.Topic == u'帰らせマスターから貴方へ伝えたいこと':
             if msg.Body.startswith(u"@bye"):
                 item = msg.Body.split(' ')
-                name = item[1]
-                filename = "back_log/" + name + ".dat"
-                if os.path.exists(filename):
-                    file = open(filename, "a")
-                    if len(item) >= 3:
-                        file.write(item[2]+" "+item[3]+"\n")
-                    else:
-                        file.write(str(datetime.datetime.now())+"\n")
-                    file.close()
-                    msg.Chat.SendMessage(u"ほなね!お気をつけて(h)")
-                else:
-                    msg.Chat.SendMessage(u"そんなusernameおらへんで。@new username で新しく追加してなっ。")
+                try:
+                    name = item[1]
+                    try:
+                        filename = glob.glob('back_log/' + name + '%*%0%00.dat')[0]
+                        file = open(filename, "a")
+                        if len(item) >= 3:
+                            file.write(item[2]+" "+item[3]+"\n")
+                        else:
+                            file.write(str(datetime.datetime.now())+"\n")
+                        file.close()
+                        msg.Chat.SendMessage(u"ほなね!お気をつけて(h)")
+                        cmd = 'mv ' + filename + ' ' + filename.replace('%0%00.dat', '%1%00.dat')
+                        os.system(cmd)
+
+                    except:
+                        try:
+                            filename = glob.glob('back_log/' + name + '%*%1%00.dat')[0]
+                            msg.Chat.SendMessage(u"もう今日は帰ったことになってんで。")
+                        except:
+                            msg.Chat.SendMessage(u"そんなusernameおらへんで。@new username で新しく追加してなっ。")
+                except:
+                    msg.Chat.SendMessage(u"[@bye username] ってふうに、usernameも指定した？！もう一回やってみて。")
+
             elif msg.Body.startswith(u"@new"):
-                name = msg.Body.split(' ')[1]
-                filename = "back_log/" + name + ".dat"
-                if os.path.exists(filename):
-                    msg.Chat.SendMessage(u"そのusernameの人、もういてはるわー(bow)")
-                else:
-                    file = open(filename, "w")
-                    file.write("")
-                    file.close()
-                    msg.Chat.SendMessage(u"username登録したで(*)")
-            elif msg.Body.startswith(u"@history"):
-                item = msg.Body.split(' ')
-                name = item[1]
-                filename = "back_log/" + name + ".dat"
-                if os.path.exists(filename):
-                    lineList = [line for line in open(filename, "r")]
-                    l = len(lineList)
-                    if len(item) == 3:
-                        num = int(item[2])
-                    elif l >= 7:
-                        num = 7
+                try:
+                    name = msg.Body.split(' ')[1]
+                    if name.find("%") < 0:
+                        filename = glob.glob('back_log/' + name + '%*%*%*.dat')
+                        if len(filename) > 0:
+                            msg.Chat.SendMessage(u"そのusernameの人、もういてはるわー(bow)")
+                        else:
+                            skypeID = msg.FromHandle
+                            filename = "back_log/" + name + "%" + skypeID + "%0%00.dat"
+                            file = open(filename, "w")
+                            file.write("")
+                            file.close()
+                            msg.Chat.SendMessage(u"username登録したで(*)")
                     else:
-                        num = l
-                    for i in range((l - num), l):
-                        msg.Chat.SendMessage(lineList[i])
-                else:
-                    msg.Chat.SendMessage(u"そんなusernameおらへんで。@new username で新しく追加してなっ。")
+                        msg.Chat.SendMessage(u"usernameに % は使われへんねん。ちゃうusernameにしてー。")
+                except:
+                    msg.Chat.SendMessage(u"[@new username] ってふうに、usernameも指定した？！もう一回やってみて。")
+
+            elif msg.Body.startswith(u"@history"):
+                try:
+                    item = msg.Body.split(' ')
+                    name = item[1]
+                    try:
+                        filename = glob.glob('back_log/' + name + '%*%*%*.dat')[0]
+                        lineList = [line for line in open(filename, "r")]
+                        l = len(lineList)
+                        if len(item) == 3:
+                            num = int(item[2])
+                        elif l >= 7:
+                            num = 7
+                        else:
+                            num = l
+                        for i in range((l - num), l):
+                            msg.Chat.SendMessage(lineList[i])
+                    except:
+                        msg.Chat.SendMessage(u"そんなusernameおらへんで。@new username で新しく追加してなっ。")
+                except:
+                    msg.Chat.SendMessage(u"[@history username] ってふうに、usernameも指定した？！もう一回やってみて。")
             elif msg.Body.startswith(u"@list"):
                 message = ""
-                for list in glob.glob('back_log/*.dat'):
-                    name = os.path.basename(list).split(".")[0]
+                for list in glob.glob('back_log/*%*%*%*.dat'):
+                    name = os.path.basename(list).split("%")[0]
                     message += name + ("\n")
                 msg.Chat.SendMessage(message)
             elif msg.Body.startswith(u"@help") or msg.Body.startswith(u"@readme"):
