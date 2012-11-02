@@ -66,15 +66,18 @@ def handler(msg, event):
                     try:
                         filename = glob.glob('back_log/' + name + '%*%*%*.dat')[0]
                         lineList = [line for line in open(filename, "r")]
+                        lineList.sort(reverse=True)
                         l = len(lineList)
                         if len(item) == 3:
                             num = int(item[2])
+                            if num > l:
+                                num = l
                         elif l >= 7:
                             num = 7
                         else:
                             num = l
-                        for i in range((l - num), l):
-                            msg.Chat.SendMessage(lineList[i])
+                        for i in range(num):
+                            msg.Chat.SendMessage(lineList[i][:-1])
                     except:
                         msg.Chat.SendMessage(u"そんなusernameおらへんで。@new username で新しく追加してなっ。")
                 except:
