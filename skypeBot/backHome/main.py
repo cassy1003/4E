@@ -20,23 +20,19 @@ def handler(msg, event):
                 try:
                     name = item[1]
                     try:
-                        filename = glob.glob('back_log/' + name + '%*%0%00.dat')[0]
+                        filename = glob.glob('back_log/' + name + '%*%*%*.dat')[0]
                         file = open(filename, "a")
                         if len(item) >= 3:
                             file.write(item[2]+" "+item[3]+"\n")
+                            msg.Chat.SendMessage(u"もぉー。@byeするの忘れへんようになっ。頼むで(bow)")
                         else:
                             file.write(str(datetime.datetime.now())+"\n")
+                            msg.Chat.SendMessage(u"ほなね!お気をつけて(h)")
+                            cmd = 'mv ' + filename + ' ' + filename.replace('%0%', '%1%')
+                            os.system(cmd)
                         file.close()
-                        msg.Chat.SendMessage(u"ほなね!お気をつけて(h)")
-                        cmd = 'mv ' + filename + ' ' + filename.replace('%0%00.dat', '%1%00.dat')
-                        os.system(cmd)
-
                     except:
-                        try:
-                            filename = glob.glob('back_log/' + name + '%*%1%00.dat')[0]
-                            msg.Chat.SendMessage(u"もう今日は帰ったことになってんで。")
-                        except:
-                            msg.Chat.SendMessage(u"そんなusernameおらへんで。@new username で新しく追加してなっ。")
+                        msg.Chat.SendMessage(u"そんなusernameおらへんで。@new username で新しく追加してなっ。")
                 except:
                     msg.Chat.SendMessage(u"[@bye username] ってふうに、usernameも指定した？！もう一回やってみて。")
 
