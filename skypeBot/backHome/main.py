@@ -128,12 +128,20 @@ while(True):
                     if (now.minute == 0):
                         skype.Chats[chat_id].SendMessage(now.strftime('%H時になったで！おつかれさん！そろそろ帰ってやー(bow)'))
                         time.sleep(10)
-                    elif (now.minute % 10 == 0):
-                        skype.Chats[chat_id].SendMessage(now.strftime('%H時を%M分過ぎてもうたで！はよ帰ってや！(envy)'))
+                    elif (now.minute % 15 == 0):
+                        fileList = glob.glob('back_log/*%*%0%*.dat')
+                        for filename in filenameList:
+                          skypeID = os.path.basename(filename).split("%")[1]
+                          chat = skype.CreateChatWith(skypeID)
+                          chat.SendMessage(now.strftime('(%H:%M) はよ帰りやぁ！(envy)')
                         time.sleep(10)
                 elif (now.hour == 23):
-                    if (now.minute == 0):
-                        skype.Chats[chat_id].SendMessage(now.strftime('%H時やで！こんな時間までおるん！？もうお前なんて知らんわ(punch)'))
+                    if (now.minute % 15 == 0):
+                        fileList = glob.glob('back_log/*%*%0%*.dat')
+                        for filename in filenameList:
+                          skypeID = os.path.basename(filename).split("%")[1]
+                          chat = skype.CreateChatWith(skypeID)
+                          chat.SendMessage(now.strftime('(%H:%M) はよ帰りやぁ！(envy)')
                         time.sleep(10)
         else:
             chat_id = getChatId()
