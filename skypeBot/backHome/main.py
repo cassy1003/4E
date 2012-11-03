@@ -12,6 +12,16 @@ def getChatId():
 
 chat_id = getChatId()
 
+def notBackList():
+    message = "--- まだ帰っていない人リスト ---\n"
+    userList = glob.glob('back_log/*%*%0%*.dat'):
+    userList.sort()
+    for list in userList:
+        name = os.path.basename(list).split("%")[0]
+        message += name + ("\n")
+    return message
+
+
 def handler(msg, event):
     if event == u"RECEIVED":
         if msg.Chat.Topic == u'帰らせマスターから貴方へ伝えたいこと' or msg.Chat.Topic == u'4Eチャット':
@@ -85,6 +95,9 @@ def handler(msg, event):
                     name = os.path.basename(list).split("%")[0]
                     message += name + ("\n")
                 msg.Chat.SendMessage(message)
+            elif msg.Body.startswith(u"@notback-list"):
+                message = notBackList()
+                msg.Chat.SendMessage(message)
             elif msg.Body.startswith(u"@help") or msg.Body.startswith(u"@readme"):
                 msg.Chat.SendMessage(u"[ @help ]で説明を表示できんで。")
                 msg.Chat.SendMessage(u"新しくuserを追加するときは[ @new username ]")
@@ -128,6 +141,8 @@ while(True):
                     if (now.minute == 0):
                         skype.Chats[chat_id].SendMessage(now.strftime('%H時になったで！おつかれさん！そろそろ帰ってやー(bow)'))
                         time.sleep(10)
+                        message = notBackList()
+                        skype.Chats[chat_id].SendMessage(message)
                     elif (now.minute % 10 == 0):
                         skype.Chats[chat_id].SendMessage(now.strftime('%H時を%M分過ぎてもうたで！はよ帰ってや！(envy)'))
                         time.sleep(10)
