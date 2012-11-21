@@ -77,7 +77,9 @@ def handler(msg, event):
                     msg.Chat.SendMessage(u"[@history username] ってふうに、usernameも指定した？！もう一回やってみて。")
             elif msg.Body.startswith(u"@list"):
                 message = ""
-                for list in glob.glob('back_log/*%*%*%*.dat'):
+                userList = glob.glob('back_log/*%*%*%*.dat')
+                userList.sort()
+                for list in userList:
                     name = os.path.basename(list).split("%")[0]
                     message += name + ("\n")
                 msg.Chat.SendMessage(message)
