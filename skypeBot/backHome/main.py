@@ -1,16 +1,25 @@
 # coding: utf-8
 
-import Skype4Py, os, sys, glob, datetime, time
+import os, sys, glob, datetime, time
 
-skype = Skype4Py.Skype()
-skype.Attach()
+try:
+    import Skype4Py
+    test = False
+except:
+    test = True
+
+if not test:
+    try:
+        if sys.argv[1] == 'test':
+            test = True
+    except:
+        test = False
 
 def getChatId():
     for i in range(len(skype.Chats)):
         if skype.Chats[i].Topic == u'帰らせマスターから貴方へ伝えたいこと':
             return i
 
-chat_id = getChatId()
 
 def handler(msg, event):
     if event == u"RECEIVED":
@@ -96,6 +105,26 @@ def handler(msg, event):
         if msg.Body.startswith(u"@cute"):
             msg.Chat.SendMessage(u"(party) (F) (inlove) Of course, Ayu is so cute (inlove) (F) (party)")
 
+
+if test:
+    import Skype4PyTest as Skype4Py
+    user_input = raw_input("what type do you test? ('command' or 'message'): ")
+    if user_input == 'command':
+        user_input = raw_input("please input a command: ")
+        skype = Skype4Py.Skype()
+        skype.Body = user_input
+        skype.FromHandle = 'bot_4e_test'
+        handler(skype, 'RECEIVED')
+        sys.exit(0)
+    elif user_input == 'message':
+        print 'OK! Wait to be sent auto messages'
+    else:
+        print "pleaze input 'command' or 'message'"
+        sys.exit(0)
+
+skype = Skype4Py.Skype()
+skype.Attach()
+chat_id = getChatId()
 skype.OnMessageStatus = handler
 
 
