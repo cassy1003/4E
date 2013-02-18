@@ -106,6 +106,8 @@ def handler(msg, event):
                 msg.Chat.SendMessage(u"http://toru-furuya/~toru-furuya/mkaerase/")
         if msg.Body.startswith(u"@cute"):
             msg.Chat.SendMessage(u"(party) (F) (inlove) Of course, Ayu is so cute (inlove) (F) (party)")
+        elif msg.Body.startswith(u"@hungry"):
+            msg.Chat.SendMessage(u"はよ帰って家でご飯食いや(devil) ")
 
 
 if test:
