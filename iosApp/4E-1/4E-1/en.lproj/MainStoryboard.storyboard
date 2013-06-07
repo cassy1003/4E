@@ -120,40 +120,54 @@
                                     <segue destination="RWv-8p-lHQ" kind="unwind" unwindAction="detailViewReturnActionForSegue:" id="aev-4F-suf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfb-zw-ZNn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDf-rF-lQB">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="9UQ-D7-bDO"/>
-                                    <constraint firstAttribute="width" constant="257" id="EwS-DN-0NA"/>
+                                    <constraint firstAttribute="width" constant="343" id="Tvv-11-4g9"/>
+                                    <constraint firstAttribute="height" constant="282" id="sTN-xq-XYC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTa-ge-sw6">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButton:" destination="cdL-sr-bHg" eventType="touchDown" id="q7u-rE-LBd"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aTa-ge-sw6">
+                                <color key="backgroundColor" red="0.73369565217391308" green="0.73369565217391308" blue="0.73369565217391308" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="274" id="h9i-eO-xos"/>
-                                    <constraint firstAttribute="width" constant="240" id="k2x-Sx-FDW"/>
+                                    <constraint firstAttribute="height" constant="152" id="UU8-3y-bmI"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Gfb-zw-ZNn" firstAttribute="centerX" secondItem="aTa-ge-sw6" secondAttribute="centerX" type="default" id="1ko-g6-kcf"/>
                             <constraint firstItem="DKw-Hs-tVv" firstAttribute="leading" secondItem="Pgc-Qh-apM" secondAttribute="leading" constant="12" id="3tB-D5-TYx"/>
+                            <constraint firstItem="DKw-Hs-tVv" firstAttribute="top" secondItem="Pgc-Qh-apM" secondAttribute="top" constant="9" id="B55-zE-Y2Y"/>
+                            <constraint firstItem="SDf-rF-lQB" firstAttribute="top" secondItem="DKw-Hs-tVv" secondAttribute="top" type="default" id="BIh-Do-JQK"/>
+                            <constraint firstItem="DKw-Hs-tVv" firstAttribute="baseline" secondItem="hkI-eK-aAQ" secondAttribute="baseline" type="default" id="GIg-ly-USe"/>
                             <constraint firstAttribute="trailing" secondItem="hkI-eK-aAQ" secondAttribute="trailing" constant="13" id="GTs-cR-Xhk"/>
-                            <constraint firstItem="DKw-Hs-tVv" firstAttribute="top" secondItem="Pgc-Qh-apM" secondAttribute="top" constant="9" id="H3y-qg-h7q"/>
-                            <constraint firstItem="Gfb-zw-ZNn" firstAttribute="top" secondItem="Pgc-Qh-apM" secondAttribute="top" constant="82" id="Lpe-S6-YS0"/>
-                            <constraint firstItem="aTa-ge-sw6" firstAttribute="top" secondItem="Pgc-Qh-apM" secondAttribute="top" constant="116" id="T7B-9q-415"/>
-                            <constraint firstItem="aTa-ge-sw6" firstAttribute="centerX" secondItem="Pgc-Qh-apM" secondAttribute="centerX" type="default" id="pS0-nB-35q"/>
-                            <constraint firstItem="hkI-eK-aAQ" firstAttribute="baseline" secondItem="DKw-Hs-tVv" secondAttribute="baseline" type="default" id="vFd-9I-izQ"/>
+                            <constraint firstAttribute="trailing" secondItem="aTa-ge-sw6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="PU5-lN-q4F"/>
+                            <constraint firstItem="aTa-ge-sw6" firstAttribute="leading" secondItem="Pgc-Qh-apM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="WTE-oe-cv3"/>
+                            <constraint firstItem="aTa-ge-sw6" firstAttribute="top" secondItem="Pgc-Qh-apM" secondAttribute="top" constant="80" id="bnh-2h-ShI"/>
+                            <constraint firstItem="SDf-rF-lQB" firstAttribute="leading" secondItem="Pgc-Qh-apM" secondAttribute="leading" constant="-14" id="ybd-jk-4KL"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="labelText" destination="Gfb-zw-ZNn" id="a9D-f8-FZf"/>
                         <outlet property="labelTextBox" destination="aTa-ge-sw6" id="TJe-NA-Y05"/>
                     </connections>
                 </viewController>
@@ -191,6 +205,7 @@
         <class className="EditViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EditViewController.h"/>
             <relationships>
+                <relationship kind="action" name="doneButton:"/>
                 <relationship kind="action" name="saveButton:"/>
                 <relationship kind="outlet" name="labelText" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelTextBox" candidateClass="UITextView"/>

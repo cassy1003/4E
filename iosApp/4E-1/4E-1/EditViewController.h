@@ -10,6 +10,7 @@
 
 @interface EditViewController : UIViewController
 
+- (IBAction)doneButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *labelText;
 @property (weak, nonatomic) IBOutlet UITextView *labelTextBox;
 - (IBAction)saveButton:(id)sender;

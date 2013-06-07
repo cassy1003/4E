@@ -38,4 +38,7 @@
 - (IBAction)saveButton:(id)sender {
     self.labelText.text = @"saved";
 }
+- (IBAction)doneButton:(id)sender {
+    [self.labelTextBox endEditing:YES];
+}
 @end
