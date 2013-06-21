@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA659B0B17748AFB00CF23E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA659B0A17748AFB00CF23E8 /* UIKit.framework */; };
+		DA659B0D17748AFB00CF23E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA659B0C17748AFB00CF23E8 /* Foundation.framework */; };
+		DA659B0F17748AFB00CF23E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA659B0E17748AFB00CF23E8 /* CoreGraphics.framework */; };
+		DA659B1517748AFB00CF23E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA659B1317748AFB00CF23E8 /* InfoPlist.strings */; };
+		DA659B1717748AFB00CF23E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA659B1617748AFB00CF23E8 /* main.m */; };
+		DA659B1B17748AFB00CF23E8 /* MA01AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA659B1A17748AFB00CF23E8 /* MA01AppDelegate.m */; };
+		DA659B1D17748AFB00CF23E8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DA659B1C17748AFB00CF23E8 /* Default.png */; };
+		DA659B1F17748AFB00CF23E8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA659B1E17748AFB00CF23E8 /* Default@2x.png */; };
+		DA659B2117748AFB00CF23E8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA659B2017748AFB00CF23E8 /* Default-568h@2x.png */; };
+		DA659B2417748AFB00CF23E8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA659B2217748AFB00CF23E8 /* MainStoryboard_iPhone.storyboard */; };
+		DA659B2717748AFB00CF23E8 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA659B2517748AFB00CF23E8 /* MainStoryboard_iPad.storyboard */; };
+		DA659B2A17748AFB00CF23E8 /* MA01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA659B2917748AFB00CF23E8 /* MA01ViewController.m */; };
+		DA659B3217748AFC00CF23E8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA659B3117748AFC00CF23E8 /* SenTestingKit.framework */; };
+		DA659B3317748AFC00CF23E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA659B0A17748AFB00CF23E8 /* UIKit.framework */; };
+		DA659B3417748AFC00CF23E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA659B0C17748AFB00CF23E8 /* Foundation.framework */; };
+		DA659B3C17748AFC00CF23E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA659B3A17748AFC00CF23E8 /* InfoPlist.strings */; };
+		DA659B3F17748AFC00CF23E8 /* MemoApp01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA659B3E17748AFC00CF23E8 /* MemoApp01Tests.m */; };
+		DA659B4A17748FE200CF23E8 /* MA01MemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA659B4917748FE200CF23E8 /* MA01MemoListViewController.m */; };
+		DA659B4D1774983C00CF23E8 /* MA01MemoLIst.m in Sources */ = {isa = PBXBuildFile; fileRef = DA659B4C1774983C00CF23E8 /* MA01MemoLIst.m */; };
+		DA659B5017749B8F00CF23E8 /* MA01Memo.m in Sources */ = {isa = PBXBuildFile; fileRef = DA659B4F17749B8E00CF23E8 /* MA01Memo.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA659B3517748AFC00CF23E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA659AFF17748AFB00CF23E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA659B0617748AFB00CF23E8;
+			remoteInfo = MemoApp01;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA659B0717748AFB00CF23E8 /* MemoApp01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoApp01.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA659B0A17748AFB00CF23E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DA659B0C17748AFB00CF23E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA659B0E17748AFB00CF23E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DA659B1217748AFB00CF23E8 /* MemoApp01-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MemoApp01-Info.plist"; sourceTree = "<group>"; };
+		DA659B1417748AFB00CF23E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA659B1617748AFB00CF23E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA659B1817748AFB00CF23E8 /* MemoApp01-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemoApp01-Prefix.pch"; sourceTree = "<group>"; };
+		DA659B1917748AFB00CF23E8 /* MA01AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MA01AppDelegate.h; sourceTree = "<group>"; };
+		DA659B1A17748AFB00CF23E8 /* MA01AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MA01AppDelegate.m; sourceTree = "<group>"; };
+		DA659B1C17748AFB00CF23E8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DA659B1E17748AFB00CF23E8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DA659B2017748AFB00CF23E8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DA659B2317748AFB00CF23E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		DA659B2617748AFB00CF23E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		DA659B2817748AFB00CF23E8 /* MA01ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MA01ViewController.h; sourceTree = "<group>"; };
+		DA659B2917748AFB00CF23E8 /* MA01ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MA01ViewController.m; sourceTree = "<group>"; };
+		DA659B3017748AFC00CF23E8 /* MemoApp01Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemoApp01Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA659B3117748AFC00CF23E8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DA659B3917748AFC00CF23E8 /* MemoApp01Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MemoApp01Tests-Info.plist"; sourceTree = "<group>"; };
+		DA659B3B17748AFC00CF23E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA659B3D17748AFC00CF23E8 /* MemoApp01Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemoApp01Tests.h; sourceTree = "<group>"; };
+		DA659B3E17748AFC00CF23E8 /* MemoApp01Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemoApp01Tests.m; sourceTree = "<group>"; };
+		DA659B4817748FE200CF23E8 /* MA01MemoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MA01MemoListViewController.h; sourceTree = "<group>"; };
+		DA659B4917748FE200CF23E8 /* MA01MemoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MA01MemoListViewController.m; sourceTree = "<group>"; };
+		DA659B4B1774983C00CF23E8 /* MA01MemoLIst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MA01MemoLIst.h; sourceTree = "<group>"; };
+		DA659B4C1774983C00CF23E8 /* MA01MemoLIst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MA01MemoLIst.m; sourceTree = "<group>"; };
+		DA659B4E17749B8E00CF23E8 /* MA01Memo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MA01Memo.h; sourceTree = "<group>"; };
+		DA659B4F17749B8E00CF23E8 /* MA01Memo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MA01Memo.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA659B0417748AFB00CF23E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA659B0B17748AFB00CF23E8 /* UIKit.framework in Frameworks */,
+				DA659B0D17748AFB00CF23E8 /* Foundation.framework in Frameworks */,
+				DA659B0F17748AFB00CF23E8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA659B2C17748AFB00CF23E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA659B3217748AFC00CF23E8 /* SenTestingKit.framework in Frameworks */,
+				DA659B3317748AFC00CF23E8 /* UIKit.framework in Frameworks */,
+				DA659B3417748AFC00CF23E8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA659AFE17748AFB00CF23E8 = {
+			isa = PBXGroup;
+			children = (
+				DA659B1017748AFB00CF23E8 /* MemoApp01 */,
+				DA659B3717748AFC00CF23E8 /* MemoApp01Tests */,
+				DA659B0917748AFB00CF23E8 /* Frameworks */,
+				DA659B0817748AFB00CF23E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA659B0817748AFB00CF23E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA659B0717748AFB00CF23E8 /* MemoApp01.app */,
+				DA659B3017748AFC00CF23E8 /* MemoApp01Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA659B0917748AFB00CF23E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA659B0A17748AFB00CF23E8 /* UIKit.framework */,
+				DA659B0C17748AFB00CF23E8 /* Foundation.framework */,
+				DA659B0E17748AFB00CF23E8 /* CoreGraphics.framework */,
+				DA659B3117748AFC00CF23E8 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA659B1017748AFB00CF23E8 /* MemoApp01 */ = {
+			isa = PBXGroup;
+			children = (
+				DA659B1917748AFB00CF23E8 /* MA01AppDelegate.h */,
+				DA659B1A17748AFB00CF23E8 /* MA01AppDelegate.m */,
+				DA659B2217748AFB00CF23E8 /* MainStoryboard_iPhone.storyboard */,
+				DA659B4B1774983C00CF23E8 /* MA01MemoLIst.h */,
+				DA659B4C1774983C00CF23E8 /* MA01MemoLIst.m */,
+				DA659B4E17749B8E00CF23E8 /* MA01Memo.h */,
+				DA659B4F17749B8E00CF23E8 /* MA01Memo.m */,
+				DA659B2517748AFB00CF23E8 /* MainStoryboard_iPad.storyboard */,
+				DA659B2817748AFB00CF23E8 /* MA01ViewController.h */,
+				DA659B2917748AFB00CF23E8 /* MA01ViewController.m */,
+				DA659B4817748FE200CF23E8 /* MA01MemoListViewController.h */,
+				DA659B4917748FE200CF23E8 /* MA01MemoListViewController.m */,
+				DA659B1117748AFB00CF23E8 /* Supporting Files */,
+			);
+			path = MemoApp01;
+			sourceTree = "<group>";
+		};
+		DA659B1117748AFB00CF23E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA659B1217748AFB00CF23E8 /* MemoApp01-Info.plist */,
+				DA659B1317748AFB00CF23E8 /* InfoPlist.strings */,
+				DA659B1617748AFB00CF23E8 /* main.m */,
+				DA659B1817748AFB00CF23E8 /* MemoApp01-Prefix.pch */,
+				DA659B1C17748AFB00CF23E8 /* Default.png */,
+				DA659B1E17748AFB00CF23E8 /* Default@2x.png */,
+				DA659B2017748AFB00CF23E8 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA659B3717748AFC00CF23E8 /* MemoApp01Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DA659B3D17748AFC00CF23E8 /* MemoApp01Tests.h */,
+				DA659B3E17748AFC00CF23E8 /* MemoApp01Tests.m */,
+				DA659B3817748AFC00CF23E8 /* Supporting Files */,
+			);
+			path = MemoApp01Tests;
+			sourceTree = "<group>";
+		};
+		DA659B3817748AFC00CF23E8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA659B3917748AFC00CF23E8 /* MemoApp01Tests-Info.plist */,
+				DA659B3A17748AFC00CF23E8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA659B0617748AFB00CF23E8 /* MemoApp01 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA659B4217748AFC00CF23E8 /* Build configuration list for PBXNativeTarget "MemoApp01" */;
+			buildPhases = (
+				DA659B0317748AFB00CF23E8 /* Sources */,
+				DA659B0417748AFB00CF23E8 /* Frameworks */,
+				DA659B0517748AFB00CF23E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MemoApp01;
+			productName = MemoApp01;
+			productReference = DA659B0717748AFB00CF23E8 /* MemoApp01.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA659B2F17748AFB00CF23E8 /* MemoApp01Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA659B4517748AFC00CF23E8 /* Build configuration list for PBXNativeTarget "MemoApp01Tests" */;
+			buildPhases = (
+				DA659B2B17748AFB00CF23E8 /* Sources */,
+				DA659B2C17748AFB00CF23E8 /* Frameworks */,
+				DA659B2D17748AFB00CF23E8 /* Resources */,
+				DA659B2E17748AFB00CF23E8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA659B3617748AFC00CF23E8 /* PBXTargetDependency */,
+			);
+			name = MemoApp01Tests;
+			productName = MemoApp01Tests;
+			productReference = DA659B3017748AFC00CF23E8 /* MemoApp01Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA659AFF17748AFB00CF23E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MA01;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Takahiro Kashiwagi";
+			};
+			buildConfigurationList = DA659B0217748AFB00CF23E8 /* Build configuration list for PBXProject "MemoApp01" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DA659AFE17748AFB00CF23E8;
+			productRefGroup = DA659B0817748AFB00CF23E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA659B0617748AFB00CF23E8 /* MemoApp01 */,
+				DA659B2F17748AFB00CF23E8 /* MemoApp01Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA659B0517748AFB00CF23E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA659B1517748AFB00CF23E8 /* InfoPlist.strings in Resources */,
+				DA659B1D17748AFB00CF23E8 /* Default.png in Resources */,
+				DA659B1F17748AFB00CF23E8 /* Default@2x.png in Resources */,
+				DA659B2117748AFB00CF23E8 /* Default-568h@2x.png in Resources */,
+				DA659B2417748AFB00CF23E8 /* MainStoryboard_iPhone.storyboard in Resources */,
+				DA659B2717748AFB00CF23E8 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA659B2D17748AFB00CF23E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA659B3C17748AFC00CF23E8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA659B2E17748AFB00CF23E8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA659B0317748AFB00CF23E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA659B1717748AFB00CF23E8 /* main.m in Sources */,
+				DA659B1B17748AFB00CF23E8 /* MA01AppDelegate.m in Sources */,
+				DA659B2A17748AFB00CF23E8 /* MA01ViewController.m in Sources */,
+				DA659B4A17748FE200CF23E8 /* MA01MemoListViewController.m in Sources */,
+				DA659B4D1774983C00CF23E8 /* MA01MemoLIst.m in Sources */,
+				DA659B5017749B8F00CF23E8 /* MA01Memo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA659B2B17748AFB00CF23E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA659B3F17748AFC00CF23E8 /* MemoApp01Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA659B3617748AFC00CF23E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA659B0617748AFB00CF23E8 /* MemoApp01 */;
+			targetProxy = DA659B3517748AFC00CF23E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA659B1317748AFB00CF23E8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA659B1417748AFB00CF23E8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA659B2217748AFB00CF23E8 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA659B2317748AFB00CF23E8 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		DA659B2517748AFB00CF23E8 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA659B2617748AFB00CF23E8 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		DA659B3A17748AFC00CF23E8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA659B3B17748AFC00CF23E8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA659B4017748AFC00CF23E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA659B4117748AFC00CF23E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA659B4317748AFC00CF23E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoApp01/MemoApp01-Prefix.pch";
+				INFOPLIST_FILE = "MemoApp01/MemoApp01-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DA659B4417748AFC00CF23E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoApp01/MemoApp01-Prefix.pch";
+				INFOPLIST_FILE = "MemoApp01/MemoApp01-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DA659B4617748AFC00CF23E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MemoApp01.app/MemoApp01";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoApp01/MemoApp01-Prefix.pch";
+				INFOPLIST_FILE = "MemoApp01Tests/MemoApp01Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DA659B4717748AFC00CF23E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MemoApp01.app/MemoApp01";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MemoApp01/MemoApp01-Prefix.pch";
+				INFOPLIST_FILE = "MemoApp01Tests/MemoApp01Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA659B0217748AFB00CF23E8 /* Build configuration list for PBXProject "MemoApp01" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA659B4017748AFC00CF23E8 /* Debug */,
+				DA659B4117748AFC00CF23E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA659B4217748AFC00CF23E8 /* Build configuration list for PBXNativeTarget "MemoApp01" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA659B4317748AFC00CF23E8 /* Debug */,
+				DA659B4417748AFC00CF23E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DA659B4517748AFC00CF23E8 /* Build configuration list for PBXNativeTarget "MemoApp01Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA659B4617748AFC00CF23E8 /* Debug */,
+				DA659B4717748AFC00CF23E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA659AFF17748AFB00CF23E8 /* Project object */;
+}
